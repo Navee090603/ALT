@@ -1,0 +1,50 @@
+{
+  "DemoMode": true,
+  "TimeZoneId": "India Standard Time",
+  "PollIntervalSeconds": 10,
+  "StabilityCheckIntervalSeconds": 3,
+  "StabilityCheckAttempts": 3,
+  "MaxRetries": 3,
+  "RetryDelaySeconds": 2,
+  "StuckFileThresholdMinutes": 10,
+  "MbPerHourProcessingRatio": 250.0,
+  "LogFilePath": "logs/monitor.log",
+  "Folders": {
+    "VendorExtractUtility": "C:/Altruista834/Demo/VendorExtractUtility",
+    "Proprietary": "C:/Altruista834/Demo/VendorExtractUtility/Proprietary",
+    "Hold": "C:/Altruista834/Demo/HOLD",
+    "Drop": "C:/Altruista834/Demo/DROP"
+  },
+  "Smtp": {
+    "Host": "smtp.company.local",
+    "Port": 25,
+    "EnableSsl": false,
+    "UserName": "",
+    "Password": "",
+    "From": "noreply@company.com",
+    "TimeoutMilliseconds": 15000
+  },
+  "EmailGroups": {
+    "ItOps": [ "itops@company.com" ],
+    "InternalTeam": [ "internal.ops@company.com" ],
+    "Client": [ "client-alerts@client.com" ]
+  },
+  "TimeWindows": {
+    "Step1": { "Start": "06:00:00", "End": "08:30:00" },
+    "Step2": { "Start": "06:00:00", "End": "08:30:00", "Deadline": "10:00:00" },
+    "Step3": { "Start": "06:00:00", "End": "10:00:00" },
+    "Step4": { "Start": "06:00:00", "End": "10:00:00", "Deadline": "09:55:00" }
+  },
+  "Processes": {
+    "C": {
+      "SearchPattern": "*C*.txt",
+      "RequireTodayDateInName": true,
+      "DateFormat": "yyyyMMdd"
+    },
+    "Pend_C": {
+      "SearchPattern": "*Pend_C*.txt",
+      "RequireTodayDateInName": true,
+      "DateFormat": "yyyyMMdd"
+    }
+  }
+}
